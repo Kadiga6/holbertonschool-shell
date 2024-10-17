@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -empty -exec echo {} \; -o -type d -empty -exec echo {} \; | sed 's|./||'
+find . -empty -exec test -f {} \; -print -o -exec test -d {} \; -print
